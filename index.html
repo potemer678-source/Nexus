@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nexus — Dark Social & Chat Scaffold</title>
+    <meta name="description" content="Nexus — a dark-mode-first social & communication scaffold (Next.js + Tailwind, Express + Socket.io)." />
+    <meta name="theme-color" content="#0b0d10" />
+    <style>
+      :root{--bg:#0b0d10;--card:#0f1724;--muted:#94a3b8;--accent:#7c3aed}
+      html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+      body{background:linear-gradient(180deg,#030305 0%,var(--bg) 100%);color:#e6eef8;display:flex;align-items:center;justify-content:center}
+      .card{width:min(920px,94vw);background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(6px);padding:28px;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+      h1{margin:0 0 8px 0;font-weight:700;font-size:20px}
+      p{margin:0 0 16px 0;color:var(--muted)}
+      .grid{display:grid;grid-template-columns:1fr 200px;gap:16px}
+      .left{min-width:0}
+      .links{display:flex;gap:8px;flex-wrap:wrap}
+      a.btn{display:inline-block;padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#0066ff);color:white;text-decoration:none;font-weight:600}
+      .meta{font-size:13px;color:var(--muted);margin-top:12px}
+      .right{display:flex;flex-direction:column;gap:10px}
+      .box{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);min-height:48px}
+      footer{margin-top:16px;font-size:13px;color:var(--muted);text-align:center}
+      @media (max-width:640px){.grid{grid-template-columns:1fr}}
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main">
+      <div class="grid">
+        <section class="left">
+          <h1>Nexus</h1>
+          <p>A responsive, dark-mode-first social & communication scaffold inspired by Discord and Instagram. This repository contains a Next.js frontend (app/) and an Express + Socket.io backend (server/).</p>
+
+          <div class="links" aria-hidden>
+            <a class="btn" href="/app" target="_self">Open Frontend (app/)</a>
+            <a class="btn" href="/server" style="background:linear-gradient(90deg,#121212,#2b6cb0)" target="_self">Open Backend (server/)</a>
+            <a class="btn" href="https://github.com/potemer678-source/Nexus" style="background:transparent;border:1px solid rgba(255,255,255,0.06)" target="_blank">Repo on GitHub</a>
+          </div>
+
+          <div class="meta">Local dev: run the backend at port 4000 and the frontend at port 3000. See README.md in the repository root for full instructions.</div>
+
+          <footer>
+            Created with ❤️ — Dark-mode-first UI • Tailwind • Next.js • Express • Socket.io
+          </footer>
+        </section>
+
+        <aside class="right" aria-label="project overview">
+          <div class="box">
+            <strong>What's here</strong>
+            <div class="meta">Next.js app (app/), Express server (server/), Tailwind config, example Socket.io & WebRTC placeholders.</div>
+          </div>
+
+          <div class="box">
+            <strong>Supabase</strong>
+            <div class="meta">If you plan to use Supabase, add your DB schema and storage rules. See the SQL schema provided in the PR for users, posts, rooms, messages, and media.</div>
+          </div>
+
+          <div class="box">
+            <strong>Next steps</strong>
+            <div class="meta">Pick one: A) DB integration, B) Avatar upload & S3/Supabase Storage, C) WebRTC signaling & sample calls. Ask me to implement it and I'll add focused changes.</div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
